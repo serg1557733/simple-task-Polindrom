@@ -1,5 +1,5 @@
 
-let input = document.getElementsByClassName('#main_input').input;
+let input = document.getElementsByClassName('main_input').input;
 console.log(input);
 let btn = document.getElementsByTagName('button')
 btn.onclick = () => console.log('work');
