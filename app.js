@@ -1,10 +1,9 @@
 
 let input = document.getElementById('main_input');
-console.log(input.value);
-document.getElementById('btn').onclick = () => console.log('work');;
+document.getElementById('btn').onclick = () => console.log(input.value);;
  
 
-let a = '123321'
+let a = '123321';
 let arr = a.split('').reverse().join('');
 console.log('intresult a'+' '+ a)
 console.log('result arr'+' '+arr)
