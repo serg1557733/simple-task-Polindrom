@@ -1,19 +1,14 @@
 let input = document.getElementById('main_input');
 document.getElementById('btn').onclick = () => {
     console.log(input.value)
+    polindrom (input.value)
     input.value = ''};
-
  
-//test function
-let a = '123321';
-let arr = a.split('').reverse().join('');
-console.log('intresult a'+' '+ a)
-console.log('result arr'+' '+arr)
-
-
-
-let str1 = 'aNna1'
-document.getElementById('btn1').onclick = polindrom (str1);
+// test function
+// let a = '123321';
+// let arr = a.split('').reverse().join('');
+// console.log('intresult a'+' '+ a)
+// console.log('result arr'+' '+arr)
 
 function polindrom (str){
     str = str.toLowerCase()
@@ -22,4 +17,4 @@ function polindrom (str){
     else {console.log('it`s not polindrome')}
     };
     
-    console.log('work end');
+console.log('work end');
