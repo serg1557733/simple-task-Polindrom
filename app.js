@@ -41,6 +41,43 @@ let id = setTimeout(function log(){
 } */
 
 
-const now = new Date(0);
+const now = new Date();
+const ttt = Date.parse('2021-05-01');
+
+console.log(ttt);
+
+/* console.log(now.getFullYear());
+console.log(now.getMonth());
+console.log(now.getDate());
+console.log(now.getTimezoneOffset());
+console.log(now.getDay());
+
+console.log(now.getHours());
+console.log(now.getUTCHours()); */
+
+//console.log(Date(now.getTime()));
+
+//Setters
+
+
+console.log(now.setHours(40));
 
 console.log(now);
+
+console.time('st');
+
+let start = new Date();
+
+for (let i = 0; i < 100000; i++){
+
+  const some = i**3;
+}
+
+let end = new Date();
+console.timeEnd('st');
+
+
+console.log(end - start);
+
+
+
