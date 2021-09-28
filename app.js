@@ -1,20 +1,46 @@
-let input = document.getElementById('main_input');
-document.getElementById('btn').onclick = () => {
-    console.log(input.value)
-    polindrom (input.value)
-    input.value = ''};
- 
-// test function
-// let a = '123321';
-// let arr = a.split('').reverse().join('');
-// console.log('intresult a'+' '+ a)
-// console.log('result arr'+' '+arr)
+/*  const btn = document.querySelector('.btn');
 
-function polindrom (str){
-    str = str.toLowerCase()
-    if (str===str.split('').reverse().join(''))
-    {return console.log('it`s polindrome')}
-    else {console.log('it`s not polindrome')}
-    };
-    
-console.log('work end');
+
+
+
+btn.addEventListener('click', () => {
+  myAnimation ();
+})
+
+ */
+/*
+
+function logger () {
+  if(i == 3) {
+    clearInterval(timerId);
+  }
+  console.log('text');
+  i++;
+}
+
+let id = setTimeout(function log(){
+    console.log('helloooo');
+    id = setTimeout(log, 1000);
+}, 2000);
+ */
+
+/* function myAnimation () {
+    const box = document.querySelector('.box');
+    let pos = 0;
+
+    const id = setInterval(frame, 10);
+    function frame() {
+       if (pos == 220) {
+         clearInterval(id);
+       } else {
+         pos++;
+         box.style.top = pos + 'px';
+         box.style.left = pos + 'px';
+       }
+    }
+} */
+
+
+const now = new Date(0);
+
+console.log(now);
