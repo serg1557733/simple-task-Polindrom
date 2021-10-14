@@ -210,7 +210,7 @@ console.log(clone);
 console.log(person);
  */
 
-const inputUsd = document.getElementById('usd'),
+/* const inputUsd = document.getElementById('usd'),
       inputUah = document.getElementById('uah');
 
 inputUah.addEventListener('input', () => {
@@ -230,7 +230,7 @@ inputUah.addEventListener('input', () => {
       }
 
     });
-
+ 
     //load if requset loaded fuulifile
     //status
     //status text
@@ -238,3 +238,116 @@ inputUah.addEventListener('input', () => {
     //readyState
 
 });
+*/
+/* 
+console.log('pending');
+
+const req = new Promise(function(resolve, reject) {
+  setTimeout( ()=>{
+    console.log('prepaining');
+  
+    const product = {
+        name : 'TV',
+        price: 2000
+    };
+  
+        resolve(product);
+  }, 2000);
+
+}).then((product) => {
+     return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            product.status = 'order';
+            resolve(product);
+          },2000);
+      });
+     
+  }).then(data => {
+      data.modify = true;
+      return data;
+    
+  }).then((data) => {
+    console.log(data);
+  }).catch(() => {
+      console.error('error was find')
+  }).finally(() => {
+      console.log('finaly');
+  });
+  
+   */
+
+/*   const test = time => {
+      return new Promise(resolve => {
+          setTimeout(() => {resolve()}, time);
+      });
+  }; */
+  
+/* test(1000).then(()=> console.log('1000'));
+test(2000).then(()=> console.log('2000')); */
+
+/* Promise.all([test(1000), test(2000)]).then(() => {
+    console.log('then');
+}); */
+
+/* Promise.race([test(1000), test(2000)]).then(() => {
+    console.log(test);
+}); */
+
+
+//working with ARRAY method
+
+
+const names = ['anna' , 'sergey', 'Ksenia', 'ket', 'Voldemar'];
+
+const shortNames = names.filter( item => item.length < 5);
+
+
+console.log(shortNames);
+
+//map
+
+let result = ['IvaN', 'LidNNAd', 'FsjfHKJ ', 'sdgsgHHk'];
+
+result = result.map(item => item.toLowerCase());
+
+console.log(result);
+
+
+//every/some boolean return
+
+const some = [4, 4];
+
+console.log(some.some(item => typeof(item) === 'number'));
+
+console.log(some.every(item => typeof(item) === 'number'));
+
+
+//reduce
+
+/* const numbers = [4, 50, 1, 3, 1, 2];
+
+const summ = numbers.reduce((accum, item) => item + accum);
+
+console.log(summ); */
+
+
+const numbers = ['tomat', 'pear', 'orange','apple'];
+
+const summ = numbers.reduce((accum, item) =>` ${accum}, ${item}`, 45);
+
+console.log(summ);
+
+
+const obj = {
+  ivan :'persone',
+  ann: 'persone',
+  dog: 'pet',
+  cat: 'pet'
+};
+
+console.log(Object.entries(obj)
+        .filter(item => item[1] == 'persone')
+        .map(item => item[0]));
+
+
+
