@@ -295,7 +295,7 @@ test(2000).then(()=> console.log('2000')); */
 
 
 //working with ARRAY method
-
+/* 
 
 const names = ['anna' , 'sergey', 'Ksenia', 'ket', 'Voldemar'];
 
@@ -321,7 +321,7 @@ console.log(some.some(item => typeof(item) === 'number'));
 
 console.log(some.every(item => typeof(item) === 'number'));
 
-
+ */
 //reduce
 
 /* const numbers = [4, 50, 1, 3, 1, 2];
@@ -331,7 +331,7 @@ const summ = numbers.reduce((accum, item) => item + accum);
 console.log(summ); */
 
 
-const numbers = ['tomat', 'pear', 'orange','apple'];
+/* const numbers = ['tomat', 'pear', 'orange','apple'];
 
 const summ = numbers.reduce((accum, item) =>` ${accum}, ${item}`, 45);
 
@@ -340,14 +340,54 @@ console.log(summ);
 
 const obj = {
   ivan :'persone',
-  ann: 'persone',
+  anna: 'persone',
   dog: 'pet',
   cat: 'pet'
 };
 
 console.log(Object.entries(obj)
         .filter(item => item[1] == 'persone')
-        .map(item => item[0]));
+        .map((item) => item[0])); */
 
+// getters and setters
 
+/* const persone = {
+    name: 'Alex',
+    age : 26,
 
+  get userAge() {
+        return this.age;
+  },
+  set userAge(num) {
+      this.age = num;
+  }
+};
+
+console.log(persone.userAge);
+console.log(persone.userAge = 30);
+console.log(persone.userAge);
+ */
+class User {
+    constructor(name, age){
+        this.name = name;
+        this._age = age;
+    }
+    #surname = 'Rasolni';
+
+    say = () => console.log(`My name: ${this.name} ${this.#surname} age: ${this._age}`);
+    get age() {
+        return this._age;
+    }
+    set age(age) {
+       if (typeof age === 'number' && age > 0 && age < 110) {
+           this._age = age;
+
+       } else {
+           console.log('bad data');
+       }
+    }
+}
+
+const ivan = new User('Ivan', 26);
+
+ivan.say();
