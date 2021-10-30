@@ -367,7 +367,7 @@ console.log(persone.userAge);
 console.log(persone.userAge = 30);
 console.log(persone.userAge);
  */
-class User {
+/* class User {
     constructor(name, age){
         this.name = name;
         this._age = age;
@@ -375,10 +375,10 @@ class User {
     #surname = 'Rasolni';
 
     say = () => console.log(`My name: ${this.name} ${this.#surname} age: ${this._age}`);
-    get age() {
+    getage() {
         return this._age;
     }
-    set age(age) {
+    setage(age) {
        if (typeof age === 'number' && age > 0 && age < 110) {
            this._age = age;
 
@@ -390,4 +390,38 @@ class User {
 
 const ivan = new User('Ivan', 26);
 
-ivan.say();
+ivan.age = 25;
+ivan.say(); */
+
+
+//Разбор паттерна «Модуль» в JavaScript
+
+const number = 1;
+
+(function(){
+    let number = 2;
+    console.log(number);
+    console.log(number + 3);
+
+  }());
+
+  console.log(number);
+
+  //object intarface
+
+  const user = (function(){
+      const privat = function() {
+          console.log('i am privat');
+      };
+
+      return {
+          data: 1985,
+          sayHello: privat
+      };
+  }());
+
+  console.log(user);
+  user.sayHello();
+
+
+  // WEBPACK
